@@ -1,11 +1,13 @@
 var express = require('express');
+var bodyParser = require('body-parser');
 
 app = express();
+app.use(bodyParser.json());
 
-app.get('/', function(req, res){
-    let firstName = req.query.firstName;
-    let lastName = req.query.lastName;
-    res.end(firstName +' '+lastName);
+app.post('/', function(req, res){
+   let jsonData = req.body;
+   let jsonString = JSON.stringify(jsonData);
+   res.send(jsonString);
 })
 
 app.listen(4040, function(){
