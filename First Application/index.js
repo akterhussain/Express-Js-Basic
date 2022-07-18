@@ -1,16 +1,10 @@
 var express = require('express');
 
 app = express();
-app.get("/download", function(req, res){
-    res.download('./assets/akter.jpg');
-})
-
-app.get('/', function(req, res){
-    res.redirect('https://www.gaziakter.com/');
-})
 
 app.get('/about', function(req, res){
-    res.send('This is about page');
+    res.append('Name', 'Akter Hussain');
+    res.status(404).end('Hello Bangladesh!');
 })
 
 app.listen(4040, function(){
