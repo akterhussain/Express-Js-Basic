@@ -3,8 +3,10 @@ var express = require('express');
 app = express();
 
 app.get('/about', function(req, res){
-    res.append('Name', 'Akter Hussain');
-    res.status(404).end('Hello Bangladesh!');
+    res.cookie('Name', 'Akter Hussain');
+    res.cookie('City', 'Dhaka');
+    res.cookie('Age', 35);
+    res.end('cookie set success')
 })
 
 app.listen(4040, function(){
