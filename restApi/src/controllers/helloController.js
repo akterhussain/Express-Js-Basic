@@ -1,5 +1,4 @@
 exports.Hello = (req, res)=>{
-    res.status(200).json({status:"success", data:"Hello this is my first express first rest api"})
+    res.status(203).json({status:"success", data:"Hello this is my first express first rest api"})
 }
 
-// Last tutorial: 38
