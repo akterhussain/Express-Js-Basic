@@ -1,5 +1,8 @@
 const app = require("./app");
+const dotenv = reqiore("dotenv");
 
-app.listen(4040, function(){
-    console.log("Success");
+dotenv.config({path: "./congig.env"});
+
+app.listen(process.env.RUNNING_PORT, function(){
+    console.log(process.env.RUNNING_PORT);
 });
